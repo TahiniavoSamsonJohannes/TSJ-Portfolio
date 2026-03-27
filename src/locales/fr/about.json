@@ -1,3 +1,20 @@
 {
-    
+  "title": "À propos",
+  "subtitle": "Apprenez à me connaître",
+  "description": [
+    "Développeur Full Stack avec plus de 2 ans d'expérience, je conçois et développe des applications web et mobiles modernes, performantes et centrées sur l'utilisateur.",
+    "Diplômé en Génie Logiciel, j'ai consolidé mes compétences à travers de nombreux projets concrets, allant d'applications web complètes à des applications mobiles Android comme le Rakibolana Malagasy.",
+    "Passionné par l'innovation technologique, je suis en veille permanente sur les nouvelles tendances du développement. Mon objectif : créer des solutions digitales qui apportent une réelle valeur ajoutée."
+  ],
+  "stats": [
+    { "value": "2+", "label": "Années d'expérience" },
+    { "value": "10+", "label": "Projets réalisés" },
+    { "value": "5+", "label": "Technologies maîtrisées" }
+  ],
+  "infos": [
+    { "label": "Nom", "value": "TAHINIAVO Samson Johannès" },
+    { "label": "Spécialité", "value": "Développeur Full Stack" },
+    { "label": "Localisation", "value": "Madagascar" },
+    { "label": "Disponibilité", "value": "Disponible pour des missions" }
+  ]
 }

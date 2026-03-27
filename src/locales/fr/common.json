@@ -1,3 +1,120 @@
 {
-    
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+
+  "cta": {
+    "contact": "Me contacter",
+    "viewProjects": "Voir mes projets",
+    "downloadCV": "Télécharger mon CV",
+    "send": "Envoyer",
+    "liveDemo": "Démo en ligne",
+    "sourceCode": "Code source",
+    "readMore": "En savoir plus"
+  },
+
+  "footer": {
+    "rights": "© {year} Votre Nom. Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ et {tech}",
+    "social": "Retrouvez-moi sur :",
+    "links": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "sitemap": "Plan du site"
+    }
+  },
+
+  "buttons": {
+    "primary": "Valider",
+    "secondary": "Annuler",
+    "submit": "Soumettre",
+    "back": "Retour",
+    "next": "Suivant"
+  },
+
+  "messages": {
+    "loading": "Chargement...",
+    "error": {
+      "generic": "Une erreur s'est produite",
+      "notFound": "Page non trouvée",
+      "serverError": "Erreur serveur"
+    },
+    "success": {
+      "formSubmitted": "Message envoyé avec succès !",
+      "downloadStarted": "Téléchargement commencé..."
+    }
+  },
+
+  "form": {
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "phone": "Téléphone",
+    "subject": "Sujet",
+    "requiredField": "Ce champ est obligatoire",
+    "invalidEmail": "Email invalide",
+    "minLength": "Minimum {count} caractères"
+  },
+
+  "levels": {
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "expert": "Expert"
+  },
+
+  "months": {
+    "january": "Janvier",
+    "february": "Février",
+    "march": "Mars",
+    "april": "Avril",
+    "may": "Mai",
+    "june": "Juin",
+    "july": "Juillet",
+    "august": "Août",
+    "september": "Septembre",
+    "october": "Octobre",
+    "november": "Novembre",
+    "december": "Décembre"
+  },
+
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "youtube": "YouTube",
+    "dribbble": "Dribbble",
+    "behance": "Behance"
+  },
+
+  "technologies": {
+    "react": "React",
+    "typescript": "TypeScript",
+    "javascript": "JavaScript",
+    "nodejs": "Node.js",
+    "nextjs": "Next.js",
+    "tailwind": "Tailwind CSS",
+    "mongodb": "MongoDB",
+    "firebase": "Firebase",
+    "git": "Git",
+    "docker": "Docker",
+    "figma": "Figma"
+  },
+
+  "misc": {
+    "yearsExperience": "{count} ans d'expérience",
+    "projectsCompleted": "{count} projets réalisés",
+    "happyClients": "{count} clients satisfaits",
+    "languages": "Langues",
+    "french": "Français",
+    "english": "Anglais",
+    "spanish": "Espagnol"
+  }
 }

@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.active-nav {
+    @apply text-blue-200 font-semibold;
+}
