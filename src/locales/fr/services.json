@@ -1,3 +1,39 @@
 {
-    
+  "title": "Services",
+  "subtitle": "Ce que je peux faire pour vous",
+  "items": [
+    {
+      "icon": "design",
+      "title": "UI/UX Design",
+      "description": "Conception d'interfaces utilisateur modernes et intuitives",
+      "features": [
+        "Conception de maquettes avec Figma",
+        "Choix des couleurs, typographies et hiérarchie visuelle",
+        "Analyse des besoins des utilisateurs",
+        "Amélioration continue de l'expérience basée sur les retours utilisateurs"
+      ]
+    },
+    {
+      "icon": "code",
+      "title": "Développement Web",
+      "description": "Création de sites web et applications sur mesure",
+      "features": [
+        "Intégration HTML, CSS, JavaScript à partir de maquettes",
+        "Développement de sites portfolios, blogs, e-commerce...",
+        "Utilisation de frameworks comme TailwindCSS, React & NodeJS",
+        "Ajout de fonctionnalités dynamiques avec JavaScript/PHP"
+      ]
+    },
+    {
+      "icon": "content",
+      "title": "Création de Contenu",
+      "description": "Rédaction et adaptation de contenus multilingues",
+      "features": [
+        "Rédaction de textes pour sites web (accueil, à propos, services...)",
+        "Création de visuels simples",
+        "Traduction ou adaptation de contenus en Français, Anglais et Malagasy",
+        "Optimisation SEO des contenus"
+      ]
+    }
+  ]
 }

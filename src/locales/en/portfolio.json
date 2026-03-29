@@ -1,3 +1,74 @@
 {
-    
+  "title": "Portfolio",
+  "subtitle": "Discover my recent projects",
+  "cta": {
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
+    "comingSoon": "Coming Soon"
+  },
+  "projects": [
+    {
+      "id": "typerace",
+      "title": "TYPERACE",
+      "description": "Real-time multiplayer typing race game to improve your typing speed while having fun.",
+      "image": "typerace",
+      "tech": ["JavaScript", "Socket.io", "Node.js", "CSS"],
+      "demo": "https://typerace-demo.com",
+      "github": "https://github.com/your-username/typerace"
+    },
+    {
+      "id": "ecno-camon",
+      "title": "ECNO CAMON 15 Premier",
+      "description": "Detailed 3D smartphone modeling with interactive animations and photorealistic rendering.",
+      "image": "ecno-camon",
+      "tech": ["Blender", "Three.js", "WebGL"],
+      "demo": "https://ecno-demo.com",
+      "github": null
+    },
+    {
+      "id": "worldtaste",
+      "title": "WorldTaste",
+      "description": "Interactive web app to discover iconic dishes from every country with recipes and culinary stories.",
+      "image": "worldtaste",
+      "tech": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+      "demo": "https://worldtaste-demo.com",
+      "github": "https://github.com/your-username/worldtaste"
+    },
+    {
+      "id": "portfolio-3d",
+      "title": "3D Portfolio",
+      "description": "Immersive 3D personal portfolio with interactive navigation and smooth animations built with Three.js.",
+      "image": "portfolio-3d",
+      "tech": ["Three.js", "React", "GSAP", "Blender"],
+      "demo": "https://portfolio-3d-demo.com",
+      "github": "https://github.com/your-username/portfolio-3d"
+    },
+    {
+      "id": "aircoop-manager",
+      "title": "Aircoop Manager",
+      "description": "Complete management platform for airline cooperative: bookings, flight management and passenger tracking.",
+      "image": "aircoop",
+      "tech": ["React", "NestJS", "PostgreSQL", "Prisma"],
+      "demo": null,
+      "github": null
+    },
+    {
+      "id": "e-miage",
+      "title": "E-MIAGE",
+      "description": "Smart internship assignment management app with optimized matching algorithm for supervisors.",
+      "image": "e-miage",
+      "tech": ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+      "demo": null,
+      "github": "https://github.com/your-username/e-miage"
+    },
+    {
+      "id": "quickinvoice",
+      "title": "QuickInvoice",
+      "description": "SaaS app to generate and manage your professional invoices quickly with automatic PDF export.",
+      "image": "quickinvoice",
+      "tech": ["React", "Node.js", "Express", "PDF.js"],
+      "demo": "https://quickinvoice-demo.com",
+      "github": "https://github.com/your-username/quickinvoice"
+    }
+  ]
 }

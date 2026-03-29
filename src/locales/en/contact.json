@@ -1,3 +1,39 @@
 {
-    
+  "title": "Contact",
+  "subtitle": "Feel free to reach out",
+  "form": {
+    "title": "Send me a message",
+    "name": "Full Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "submit": "Send Message",
+    "sending": "Sending..."
+  },
+  "info": {
+    "title": "Let's stay connected",
+    "description": "I'm available to discuss your projects, answer your questions or simply chat.",
+    "email": "youremail@example.com",
+    "location": "Antananarivo, Madagascar",
+    "availability": "Available for freelance projects"
+  },
+  "social": {
+    "title": "Find me on"
+  },
+  "messages": {
+    "success": "Message sent successfully! I will get back to you as soon as possible.",
+    "error": "An error occurred. Please try again or contact me directly by email.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters"
+    }
+  }
 }

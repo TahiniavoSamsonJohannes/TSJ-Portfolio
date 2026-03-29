@@ -2,21 +2,5 @@
   "greeting": "Hello, I'm",
   "name": "TAHINIAVO Samson Johannès",
   "role": "Full Stack Developer",
-  "subtitle": "I build modern web and mobile applications",
-  "description": "Passionate about development and technological innovation, I turn your ideas into performant digital solutions.",
-  "cta": {
-    "contact": "Contact Me",
-    "viewWork": "View My Work",
-    "downloadCV": "Download CV"
-  },
-  "scrollDown": "Scroll down",
-  "stats": {
-    "experience": "2+ years",
-    "experienceLabel": "of experience",
-    "projects": "10+",
-    "projectsLabel": "projects completed",
-    "technologies": "5+",
-    "technologiesLabel": "technologies mastered"
-  },
-  "availability": "Available for freelance projects"
+  "aka": "Samson"
 }

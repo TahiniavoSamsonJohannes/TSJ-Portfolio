@@ -1,3 +1,39 @@
 {
-    
+  "title": "Services",
+  "subtitle": "What I can do for you",
+  "items": [
+    {
+      "icon": "design",
+      "title": "UI/UX Design",
+      "description": "Designing modern and intuitive user interfaces",
+      "features": [
+        "Mockup design with Figma",
+        "Color, typography and visual hierarchy choices",
+        "User needs analysis",
+        "Continuous experience improvement based on user feedback"
+      ]
+    },
+    {
+      "icon": "code",
+      "title": "Web Development",
+      "description": "Building custom websites and applications",
+      "features": [
+        "HTML, CSS, JavaScript integration from mockups",
+        "Portfolio, blog, e-commerce website development...",
+        "Using frameworks like Bootstrap, React & Node.js",
+        "Adding dynamic features with JavaScript/PHP"
+      ]
+    },
+    {
+      "icon": "content",
+      "title": "Content Creation",
+      "description": "Writing and adapting multilingual content",
+      "features": [
+        "Writing texts for websites (home, about, services...)",
+        "Creating simple visuals",
+        "Translation or adaptation of content in French, English and Malagasy",
+        "SEO content optimization"
+      ]
+    }
+  ]
 }

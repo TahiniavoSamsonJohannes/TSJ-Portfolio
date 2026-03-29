@@ -1,3 +1,57 @@
 {
-    
+  "title": "Compétences",
+  "subtitle": "Technologies et outils que je maîtrise",
+  "categories": [
+    {
+      "name": "Langages de programmation",
+      "skills": [
+        { "name": "JavaScript", "level": "Expérimenté" },
+        { "name": "TypeScript", "level": "Intermédiaire" },
+        { "name": "PHP", "level": "Expérimenté" },
+        { "name": "Java", "level": "Intermédiaire" },
+        { "name": "Python", "level": "Débutant" }
+      ]
+    },
+    {
+      "name": "Frontend",
+      "skills": [
+        { "name": "HTML/CSS", "level": "Expérimenté" },
+        { "name": "ReactJS", "level": "Expérimenté" },
+        { "name": "Tailwind CSS", "level": "Expérimenté" },
+        { "name": "Bootstrap", "level": "Intermédiaire" }
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        { "name": "NodeJS", "level": "Intermédiaire" },
+        { "name": "NestJS", "level": "Intermédiaire" },
+        { "name": "Express", "level": "Intermédiaire" }
+      ]
+    },
+    {
+      "name": "Bases de données & ORM",
+      "skills": [
+        { "name": "MySQL", "level": "Expérimenté" },
+        { "name": "PostgreSQL", "level": "Débutant" },
+        { "name": "SQLite", "level": "Intermédiaire" },
+        { "name": "Prisma", "level": "Intermédiaire" },
+        { "name": "Sequelize", "level": "Intermédiaire" }
+      ]
+    },
+    {
+      "name": "Mobile",
+      "skills": [
+        { "name": "XML", "level": "Expérimenté" },
+        { "name": "Android (Java)", "level": "Intermédiaire" }
+      ]
+    },
+    {
+      "name": "Outils & DevOps",
+      "skills": [
+        { "name": "Git & GitHub", "level": "Expérimenté" },
+        { "name": "Postman", "level": "Intermédiaire" }
+      ]
+    }
+  ]
 }

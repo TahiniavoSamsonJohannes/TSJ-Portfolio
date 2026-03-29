@@ -34,13 +34,15 @@ const Header = () => {
   }
 
   return (
-    <nav className="fixed w-full">
-      <ul className="flex justify-center text-neutral-200 font-light bg-neutral-900 ">
+    <nav className="fixed w-full z-50">
+      <ul className="flex justify-center gap-2 text-neutral-200 font-light bg-secondary ">
         {navLinks.map(link => (
-          <li key={link} className="px-1.5">
+          <li key={link}>
             <button
               onClick={() => handleNavClick(link)}
-              className={`block py-5 px-3 hover:text-blue-200 transition-all duration-500 ${activeSection === link ? 'active-nav' : ''} cursor-pointer`}>
+              className={`relative inline-block py-5 px-4 bg hover:text-blue-200 transition-all duration-200 ${activeSection === link ? 'text-blue-200' : ''} cursor-pointer`}
+            >
+              <span className={`absolute top-0 left-0 right-0 h-1 bg-blue-400 rounded-b-md transition-all ${activeSection === link ? 'opacity-100' : 'opacity-0'}`} />
               {t(`nav.${link}`)}
             </button>
           </li>

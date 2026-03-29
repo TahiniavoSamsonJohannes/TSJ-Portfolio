@@ -1,3 +1,39 @@
 {
-    
+  "title": "Contact",
+  "subtitle": "N'hésitez pas à me contacter",
+  "form": {
+    "title": "Envoyez-moi un message",
+    "name": "Nom complet",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Objet de votre message",
+    "message": "Message",
+    "messagePlaceholder": "Votre message...",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours..."
+  },
+  "info": {
+    "title": "Restons connectés",
+    "description": "Je suis disponible pour discuter de vos projets, répondre à vos questions ou simplement échanger.",
+    "email": "votreemail@example.com",
+    "location": "Antananarivo, Madagascar",
+    "availability": "Disponible pour des missions freelance"
+  },
+  "social": {
+    "title": "Retrouvez-moi sur"
+  },
+  "messages": {
+    "success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+    "error": "Une erreur s'est produite. Veuillez réessayer ou me contacter directement par email.",
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Email invalide",
+      "subjectRequired": "Le sujet est requis",
+      "messageRequired": "Le message est requis",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères"
+    }
+  }
 }

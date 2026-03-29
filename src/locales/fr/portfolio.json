@@ -1,3 +1,88 @@
 {
-    
+  "title": "Portfolio",
+  "subtitle": "Découvrez mes projets récents",
+  "cta": {
+    "viewDemo": "Voir la démo",
+    "viewCode": "Voir le code",
+    "comingSoon": "Bientôt disponible"
+  },
+  "projects": [
+    {
+      "id": "e-miage",
+      "title": "E-MIAGE",
+      "description": "Application complète de gestion d'affectation de stages aux tuteurs intégrant un algorithme de matching optimisé pour améliorer la répartition des étudiants.",
+      "image": "e-miage",
+      "tech": [
+        "React + Vite",
+        "TypeScript",
+        "NestJS",
+        "Prisma",
+        "Tailwind CSS",
+        "MySQL"
+      ],
+      "demo": null,
+      "repository": "https://gitlab.com/votre-username/e-miage",
+      "repoType": "gitlab"
+    },
+    {
+      "id": "quickinvoice",
+      "title": "QuickInvoice",
+      "description": "Application web permettant de générer et gérer rapidement des factures professionnelles avec export PDF dynamique.",
+      "image": "quickinvoice",
+      "tech": ["React + Vite", "html-to-image", "jspdf", "Tailwind CSS"],
+      "demo": "https://tahiniavosamsonjohannes.github.io/QuickInvoice/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/QuickInvoice/",
+      "repoType": "github"
+    },
+    {
+      "id": "typerace",
+      "title": "TYPERACE",
+      "description": "Jeu interactif de course de frappe conçu pour améliorer la vitesse et la précision de saisie tout en rendant l'apprentissage ludique.",
+      "image": "typerace",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://tahiniavosamsonjohannes.github.io/TYPERACE/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/TYPERACE",
+      "repoType": "github"
+    },
+    {
+      "id": "tecno-camon",
+      "title": "TECNO CAMON 15 Premier",
+      "description": "Modélisation 3D interactive d’un smartphone avec animations fluides et présentation immersive.",
+      "image": "tecno-camon",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://tahiniavosamsonjohannes.github.io/TECNOCAMON15Premier/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/TECNOCAMON15Premier",
+      "repoType": "github"
+    },
+    {
+      "id": "worldtaste",
+      "title": "WorldTaste",
+      "description": "Application web interactive permettant de découvrir les plats emblématiques du monde avec une interface moderne et responsive.",
+      "image": "worldtaste",
+      "tech": ["React + Vite", "JavaScript", "Tailwind CSS"],
+      "demo": "https://tahiniavosamsonjohannes.github.io/WorldTaste/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/WorldTaste",
+      "repoType": "github"
+    },
+    {
+      "id": "portfolio-3d",
+      "title": "Portfolio 3D",
+      "description": "Portfolio personnel immersif en 3D intégrant animations et navigation interactive pour une expérience utilisateur innovante.",
+      "image": "portfolio-3d",
+      "tech": ["HTML", "CSS3", "JavaScript"],
+      "demo": "https://tahiniavosamsonjohannes.github.io/TSJ3DPortfolio/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/TSJ3DPortfolio",
+      "repoType": "github"
+    },
+    {
+      "id": "aircoop-manager",
+      "title": "Aircoop Manager",
+      "description": "Plateforme de gestion complète pour une coopérative de transport aérien incluant gestion des réservations, des vols et des passagers.",
+      "image": "aircoop",
+      "tech": ["HTML", "CSS", "PHP", "MySQL"],
+      "demo": "https://aircoop-manager.free.nf/index.php",
+      "repository": null,
+      "repoType": null
+    }
+  ]
 }
