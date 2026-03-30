@@ -27,7 +27,7 @@
     {
       "id": "quickinvoice",
       "title": "QuickInvoice",
-      "description": "Application web permettant de générer et gérer rapidement des factures professionnelles avec export PDF dynamique.",
+      "description": "Application web permettant de générer et gérer rapidement des factures avec export PDF dynamique.",
       "image": "quickinvoice",
       "tech": ["React + Vite", "html-to-image", "jspdf", "Tailwind CSS"],
       "demo": "https://tahiniavosamsonjohannes.github.io/QuickInvoice/",

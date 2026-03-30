@@ -18,17 +18,6 @@
     "readMore": "En savoir plus"
   },
 
-  "footer": {
-    "rights": "© {year} Votre Nom. Tous droits réservés.",
-    "madeWith": "Fait avec ❤️ et {tech}",
-    "social": "Retrouvez-moi sur :",
-    "links": {
-      "privacy": "Politique de confidentialité",
-      "terms": "Conditions d'utilisation",
-      "sitemap": "Plan du site"
-    }
-  },
-
   "buttons": {
     "primary": "Valider",
     "secondary": "Annuler",
@@ -50,71 +39,13 @@
     }
   },
 
-  "form": {
-    "name": "Nom",
-    "email": "Email",
-    "message": "Message",
-    "phone": "Téléphone",
-    "subject": "Sujet",
-    "requiredField": "Ce champ est obligatoire",
-    "invalidEmail": "Email invalide",
-    "minLength": "Minimum {count} caractères"
-  },
-
-  "levels": {
-    "beginner": "Débutant",
-    "intermediate": "Intermédiaire",
-    "advanced": "Avancé",
-    "expert": "Expert"
-  },
-
-  "months": {
-    "january": "Janvier",
-    "february": "Février",
-    "march": "Mars",
-    "april": "Avril",
-    "may": "Mai",
-    "june": "Juin",
-    "july": "Juillet",
-    "august": "Août",
-    "september": "Septembre",
-    "october": "Octobre",
-    "november": "Novembre",
-    "december": "Décembre"
-  },
-
-  "social": {
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "twitter": "Twitter",
-    "instagram": "Instagram",
-    "facebook": "Facebook",
-    "youtube": "YouTube",
-    "dribbble": "Dribbble",
-    "behance": "Behance"
-  },
-
-  "technologies": {
-    "react": "React",
-    "typescript": "TypeScript",
-    "javascript": "JavaScript",
-    "nodejs": "Node.js",
-    "nextjs": "Next.js",
-    "tailwind": "Tailwind CSS",
-    "mongodb": "MongoDB",
-    "firebase": "Firebase",
-    "git": "Git",
-    "docker": "Docker",
-    "figma": "Figma"
-  },
-
-  "misc": {
-    "yearsExperience": "{count} ans d'expérience",
-    "projectsCompleted": "{count} projets réalisés",
-    "happyClients": "{count} clients satisfaits",
-    "languages": "Langues",
-    "french": "Français",
-    "english": "Anglais",
-    "spanish": "Espagnol"
+  "footer": {
+    "rights": "© {{year}} TAHINIAVO Samson Johannès. Tous droits réservés.",
+    "madeWith": "Conçu avec passion",
+    "location": "Toliara, Madagascar",
+    "quickLinks": "Liens rapides",
+    "social": "Suivez-moi",
+    "backToTop": "Retour en haut"
   }
+
 }

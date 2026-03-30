@@ -10,13 +10,13 @@
     return (
       <section
         id="home"
-        className="flex items-center min-h-screen py-16 scroll-mt-16 bg-secondary"
+        className="flex items-center min-h-screen pt-25 bg-secondary"
       >
-        <div className="flex justify-between gap-10 max-w-5xl mx-auto px-4 ">
-          <div>
-            <div>{t('home:greeting')} {t('home:aka')}</div>
-            <div className="max-w-xl leading-tight text-blue-300 text-7xl font-bold">{t('home:role')}</div>
-            <div className="flex items-center gap-5">
+        <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between gap-10 max-w-5xl mx-auto px-4 ">
+          <div className="flex flex-col md:items-center">
+            <div className="w-full text-center md:text-left">{t('home:greeting')} {t('home:aka')}</div>
+            <div className="max-w-xl text-center md:text-left leading-tight text-blue-300 text-5xl md:text-7xl font-bold">{t('home:role')}</div>
+            <div className="flex items-center justify-center md:justify-start w-full gap-5">
               <button
                 onClick={() => scrollTo('contact')}
                 className="relative inline-block font-semibold cursor-pointer pb-2 pt-4
@@ -54,7 +54,7 @@
               </button>
             </div>
           </div>
-          <img src={Profile} alt="Profile" className="w-110 h-110 rounded-4xl" />
+          <img src={Profile} alt="Profile" className="w-75 h-75 md:w-110 md:h-110 rounded-4xl" />
         </div>
       </section>
     )

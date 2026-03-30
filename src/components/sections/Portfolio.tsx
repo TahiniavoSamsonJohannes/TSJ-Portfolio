@@ -33,12 +33,12 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="min-h-screen py-16 scroll-mt-16 bg-secondary"
+      className="min-h-screen pt-25 bg-secondary"
     >
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Title */}
-        <h1 className="text-5xl font-bold text-primary mb-4">{t('title')}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">{t('title')}</h1>
 
         <p className="text-neutral-300 mb-12">{t('subtitle')}</p>
 

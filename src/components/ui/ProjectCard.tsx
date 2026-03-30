@@ -33,35 +33,23 @@ const ProjectCard = ({
       : FaGithub
 
   return (
-    <div className="bg-neutral-800/50 border border-neutral-700
-                    rounded-lg overflow-hidden
-                    hover:border-blue-200/50 transition-all duration-300
-                    hover:-translate-y-2 flex flex-col">
+    <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden hover:border-blue-200/50 transition-all duration-300 hover:-translate-y-2 flex flex-col">
 
       <div className="h-48 overflow-hidden">
-        <img
-          src={`/images/projects/${image}.png`}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+        <img src={`/images/projects/${image}.png`} alt={title} className="w-full h-full object-cover" />
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col grow">
 
-        <h3 className="text-xl font-bold text-blue-200 mb-3">
-          {title}
-        </h3>
+        <h3 className="text-xl font-bold text-blue-200 mb-3">{title}</h3>
 
-        <p className="text-neutral-300 text-sm mb-4 flex-grow">
-          {description}
-        </p>
+        <p className="text-neutral-300 text-sm mb-4 grow">{description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {tech.map((t, i) => (
             <span
               key={i}
-              className="px-3 py-1 bg-blue-200/10 text-blue-200
-                         rounded-full text-xs border border-blue-200/20">
+              className="px-3 py-1 bg-blue-200/10 text-blue-200 rounded-full text-xs border border-blue-200/20">
               {t}
             </span>
           ))}

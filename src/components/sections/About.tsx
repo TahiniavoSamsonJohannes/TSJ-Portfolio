@@ -20,10 +20,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen py-16 scroll-mt-16 bg-secondary"
+      className="flex items-center min-h-screen pt-16 bg-secondary"
     >
       <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-5xl font-bold text-primary">{t('title')}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">{t('title')}</h1>
+        <p className="text-neutral-300 mb-12">{t('contact:subtitle')}</p>
 
         <div className="space-y-4 my-8">
           {descriptions.map((paragraph, index) => (
