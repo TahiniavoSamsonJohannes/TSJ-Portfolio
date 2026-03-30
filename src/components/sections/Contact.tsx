@@ -158,16 +158,15 @@ const Contact = () => {
 
               {/* Infos */}
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-200/10 rounded-lg
-                                flex items-center justify-center shrink-0">
+                <div className="relative flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-200/10 rounded-lg flex items-center justify-center shrink-0">
                     <HiOutlineEnvelope className="w-6 h-6 text-blue-200" />
                   </div>
-                  <div>
+                  <div className='max-w-[75%]'>
                     <p className="text-sm text-neutral-400">Email</p>
                     <a
                       href={`mailto:${t('contact:info.email')}`}
-                      className="text-blue-200 hover:underline"
+                      className="block text-blue-200 hover:underline max-w-full md:max-w-fit wrap-break-word"
                     >
                       {t('contact:info.email')}
                     </a>

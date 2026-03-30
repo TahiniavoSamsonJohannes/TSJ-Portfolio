@@ -64,7 +64,7 @@ const Header = () => {
   }
 
   return (
-    <nav ref={menuRef} className="fixed w-full z-50">
+    <nav ref={menuRef} className="fixed max-w-screen max-h-15 z-50 bg-transparent">
 
       {/* Menu hamburger */}
       <button
@@ -77,12 +77,11 @@ const Header = () => {
 
       {/* Menu */}
       <ul
-        className={` md:flex flex-col md:flex-row  justify-center gap-2 text-neutral-200 font-light bg-secondary md:static fixed top-0 left-0 right-0 pt-20 md:pt-0 shadow-lg md:shadow-none ${showMenu ? 'menu-enter' : 'menu-exit md:flex'}`}
+        className={`md:flex w-screen flex-col md:flex-row justify-center gap-2 text-neutral-200 font-light bg-secondary top-0 left-0 right-0 pt-16 md:pt-0 shadow-lg md:shadow-none ${showMenu ? 'menu-enter' : 'menu-exit md:transform md:translate-y-full'} `}
       >
         {navLinks.map((link) => (
           <li
             key={link}
-            className="menu-item"
           >
             <button
               onClick={() => handleNavClick(link)}
