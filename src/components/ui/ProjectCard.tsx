@@ -36,7 +36,7 @@ const ProjectCard = ({
     <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden hover:border-blue-200/50 transition-all duration-300 hover:-translate-y-2 flex flex-col">
 
       <div className="h-48 overflow-hidden">
-        <img src={`/images/projects/${image}.png`} alt={title} className="w-full h-full object-cover" />
+        <img src={`/TSJ-Portfolio/images/projects/${image}.png`} alt={title} className="w-full h-full object-cover" />
       </div>
 
       <div className="p-6 flex flex-col grow">
