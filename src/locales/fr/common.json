@@ -1,4 +1,5 @@
 {
+  "name": "<b>Samson</b>JohannèsTahiniavo",
   "nav": {
     "home": "Accueil",
     "about": "À propos",
@@ -26,21 +27,8 @@
     "next": "Suivant"
   },
 
-  "messages": {
-    "loading": "Chargement...",
-    "error": {
-      "generic": "Une erreur s'est produite",
-      "notFound": "Page non trouvée",
-      "serverError": "Erreur serveur"
-    },
-    "success": {
-      "formSubmitted": "Message envoyé avec succès !",
-      "downloadStarted": "Téléchargement commencé..."
-    }
-  },
-
   "footer": {
-    "rights": "© {{year}} TAHINIAVO Samson Johannès. Tous droits réservés.",
+    "rights": "© {{year}} Samson Johannès Tahiniavo. Tous droits réservés.",
     "madeWith": "Conçu avec passion",
     "location": "Toliara, Madagascar",
     "quickLinks": "Liens rapides",

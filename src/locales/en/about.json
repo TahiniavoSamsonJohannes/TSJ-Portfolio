@@ -1,20 +1,14 @@
 {
-  "title": "About",
+  "title": "About Me",
   "subtitle": "Get to know me",
   "description": [
     "Full Stack Developer with over 2 years of experience, I design and build modern, performant, and user-centered web and mobile applications.",
     "With a background in Software Engineering, I have strengthened my skills through numerous hands-on projects, from complete web applications to Android mobile apps such as the Rakibolana Malagasy.",
     "Passionate about technological innovation, I constantly stay up to date with the latest development trends. My goal: to create digital solutions that deliver real value."
   ],
-  "stats": [
-    { "value": "2+", "label": "Years of Experience" },
-    { "value": "10+", "label": "Projects Completed" },
-    { "value": "5+", "label": "Technologies Mastered" }
-  ],
-  "infos": [
-    { "label": "Name", "value": "TAHINIAVO Samson Johannès" },
-    { "label": "Specialty", "value": "Full Stack Developer" },
-    { "label": "Location", "value": "Madagascar" },
-    { "label": "Availability", "value": "Available for projects" }
+  "skills": [
+    { "title": "Front-End", "experience": "3+ Years Experience" },
+    { "title": "Back-End", "experience": "2+ Years Experience" },
+    { "title": "Mobile", "experience": "360+ Hours Experience" }
   ]
 }
