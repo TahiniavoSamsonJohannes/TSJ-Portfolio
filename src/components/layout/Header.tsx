@@ -79,7 +79,7 @@ const Header = () => {
       <ul
         className={`md:flex w-screen flex-col md:flex-row justify-center gap-2 text-neutral-200 font-light bg-secondary top-0 left-0 right-0 pt-16 md:pt-0 shadow-lg md:shadow-none ${showMenu ? 'menu-enter' : 'menu-exit md:transform md:translate-y-full'} `}
       >
-        <div className="top-6 left-22 fixed md:top-5 md:left-45" dangerouslySetInnerHTML={{__html:t('name')}} />
+        <div className="top-6 left-[50%] transform -translate-x-[50%] md:translate-x-0 fixed md:top-5 md:left-45" dangerouslySetInnerHTML={{__html:t('name')}} />
         {navLinks.map((link) => (
           <li
             key={link}
