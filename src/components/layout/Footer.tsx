@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { FaFacebook, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { HiOutlineArrowUp } from 'react-icons/hi2'
 
 const Footer = () => {

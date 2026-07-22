@@ -24,7 +24,7 @@ const About = () => {
     >
       <div className="max-w-5xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">{t('title')}</h1>
-        <p className="text-neutral-300 mb-12">{t('contact:subtitle')}</p>
+        <p className="text-neutral-300 mb-12">{t('subtitle')}</p>
 
         <div className="space-y-4 my-8">
           {descriptions.map((paragraph, index) => (
