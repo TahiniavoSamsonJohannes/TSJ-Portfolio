@@ -36,7 +36,7 @@ const Portfolio = () => {
       className="min-h-screen pt-25 bg-secondary"
     >
       <div className="max-w-6xl mx-auto px-4">
-        
+
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">{t('title')}</h1>
 
