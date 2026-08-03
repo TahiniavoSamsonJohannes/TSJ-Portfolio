@@ -359,23 +359,23 @@ const Contact = () => {
             </button>
 
             {/* Status messages */}
+            {submitStatus === 'success' && (
               <div className="flex items-center gap-4 rounded-lg border border-neutral-700 bg-neutral-800/50 p-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-green-500/10">
                   <HiOutlineCheckCircle className="w-6 h-6 text-green-400" />
                 </div>
                 <p className="text-sm text-neutral-200">{t('contact:messages.success')}</p>
               </div>
-            {/* {submitStatus === 'success' && (
-            )} */}
+            )}
 
+            {submitStatus === 'error' && (
               <div className="flex items-center gap-4 rounded-lg border border-neutral-700 bg-neutral-800/50 p-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-red-500/10">
                   <HiOutlineXCircle className="w-6 h-6 text-red-400" />
                 </div>
                 <p className="text-sm text-neutral-200">{t('contact:messages.error')}</p>
               </div>
-            {/* {submitStatus === 'error' && (
-            )} */}
+            )}
 
           </form>
         </div>
