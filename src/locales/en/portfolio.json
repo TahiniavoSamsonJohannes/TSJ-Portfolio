@@ -1,16 +1,35 @@
 {
   "title": "Portfolio",
-  "subtitle": "Discover my recent projects",
+  "subtitle": "Discover my latest projects",
+  "loadMore": "Load More Projects",
   "cta": {
     "viewDemo": "View Demo",
     "viewCode": "View Code",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "viewGallery": "View More",
+    "downloadApk": "Download APK"
   },
   "projects": [
     {
+      "id": "sgm",
+      "title": "SGM",
+      "description": "Progressive Web App (PWA) for managing crew members, voyages, contracts, and documents for a maritime company, featuring a modern and responsive interface for an optimal user experience.",
+      "image": "sgm",
+      "tech": [
+        "React + Vite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Dexie.js",
+        "IndexedDB"
+      ],
+      "demo": "https://sgm-ae.netlify.app/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/SGM",
+      "repoType": "github"
+    },
+    {
       "id": "e-miage",
       "title": "E-MIAGE",
-      "description": "Complete internship assignment management application integrating an optimized matching algorithm to improve student distribution.",
+      "description": "Comprehensive internship assignment management application featuring an optimized matching algorithm to improve student allocation among supervisors.",
       "image": "e-miage",
       "tech": [
         "React + Vite",
@@ -27,7 +46,7 @@
     {
       "id": "quickinvoice",
       "title": "QuickInvoice",
-      "description": "Web application for quickly generating and managing invoices with dynamic PDF export.",
+      "description": "Web application for quickly creating and managing invoices with dynamic PDF export.",
       "image": "quickinvoice",
       "tech": ["React + Vite", "html-to-image", "jspdf", "Tailwind CSS"],
       "demo": "https://tahiniavosamsonjohannes.github.io/QuickInvoice/",
@@ -47,7 +66,7 @@
     {
       "id": "tecno-camon",
       "title": "TECNO CAMON 15 Premier",
-      "description": "Interactive 3D smartphone modeling with smooth animations and immersive presentation.",
+      "description": "Interactive 3D smartphone model featuring smooth animations and an immersive presentation.",
       "image": "tecno-camon",
       "tech": ["HTML", "CSS", "JavaScript"],
       "demo": "https://tahiniavosamsonjohannes.github.io/TECNOCAMON15Premier/",
@@ -57,7 +76,7 @@
     {
       "id": "worldtaste",
       "title": "WorldTaste",
-      "description": "Interactive web application for discovering iconic dishes from around the world with a modern and responsive interface.",
+      "description": "Interactive web application for discovering iconic dishes from around the world through a modern and responsive interface.",
       "image": "worldtaste",
       "tech": ["React + Vite", "JavaScript", "Tailwind CSS"],
       "demo": "https://tahiniavosamsonjohannes.github.io/WorldTaste/",
@@ -67,7 +86,7 @@
     {
       "id": "portfolio-3d",
       "title": "3D Portfolio",
-      "description": "Immersive 3D personal portfolio integrating animations and interactive navigation for an innovative user experience.",
+      "description": "Immersive personal 3D portfolio featuring interactive navigation and animations for a unique user experience.",
       "image": "portfolio-3d",
       "tech": ["HTML", "CSS3", "JavaScript"],
       "demo": "https://tahiniavosamsonjohannes.github.io/TSJ3DPortfolio/",
@@ -77,10 +96,54 @@
     {
       "id": "aircoop-manager",
       "title": "Aircoop Manager",
-      "description": "Complete management platform for an airline cooperative including booking, flight, and passenger management.",
+      "description": "Comprehensive management platform for an air transport cooperative, including reservation, flight, and passenger management.",
       "image": "aircoop",
       "tech": ["HTML", "CSS", "PHP", "MySQL"],
       "demo": "https://aircoop-manager.free.nf/index.php",
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "minector",
+      "title": "Minector",
+      "description": "Android decision-support application for the BET261 Mines game, featuring a simple interface designed for quick probability analysis.",
+      "image": "minector",
+      "tech": ["React Native", "SQLite", "Expo"],
+      "demo": null,
+      "apk": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "plusplus",
+      "title": "Plusplus",
+      "description": "Mobile expense tracking application for everyday spending, featuring shopping lists with prices and discounts, currency selection, light/dark themes, and local data storage using SQLite.",
+      "image": "plusplus",
+      "tech": ["React Native", "SQLite", "Expo"],
+      "demo": null,
+      "apk": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "blackticket",
+      "title": "BlackTicket",
+      "description": "Android ticketing application developed for a multi-university event, allowing users to purchase, manage, and verify tickets directly from their smartphones.",
+      "image": "blackticket",
+      "tech": ["XML", "Java", "SQLite"],
+      "demo": null,
+      "apk": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "rakibolana",
+      "title": "Rakibolana Malagasy",
+      "description": "Bilingual Malagasy–French and French–Malagasy Android dictionary designed for fast searches and offline use.",
+      "image": "rakibolana",
+      "tech": ["XML", "Java", "SQLite"],
+      "demo": null,
+      "apk": null,
       "repository": null,
       "repoType": null
     }

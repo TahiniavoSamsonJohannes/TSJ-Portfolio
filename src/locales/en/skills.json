@@ -15,7 +15,8 @@
     {
       "name": "Frontend",
       "skills": [
-        { "name": "HTML/CSS", "level": "Experienced" },
+        { "name": "HTML", "level": "Experienced" },
+        { "name": "CSS", "level": "Experienced" },
         { "name": "ReactJS", "level": "Experienced" },
         { "name": "Tailwind CSS", "level": "Experienced" },
         { "name": "Bootstrap", "level": "Intermediate" }

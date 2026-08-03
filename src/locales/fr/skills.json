@@ -15,7 +15,8 @@
     {
       "name": "Frontend",
       "skills": [
-        { "name": "HTML/CSS", "level": "Expérimenté" },
+        { "name": "HTML", "level": "Expérimenté" },
+        { "name": "CSS", "level": "Expérimenté" },
         { "name": "ReactJS", "level": "Expérimenté" },
         { "name": "Tailwind CSS", "level": "Expérimenté" },
         { "name": "Bootstrap", "level": "Intermédiaire" }
@@ -43,7 +44,8 @@
       "name": "Mobile",
       "skills": [
         { "name": "XML", "level": "Expérimenté" },
-        { "name": "Android (Java)", "level": "Intermédiaire" }
+        { "name": "Android (Java)", "level": "Intermédiaire" },
+        { "name": "React Native", "level": "Intermédiaire" }
       ]
     },
     {

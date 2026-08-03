@@ -1,4 +1,4 @@
-import { HiOutlineEye, HiOutlineArrowsPointingOut, HiOutlinePhoto } from 'react-icons/hi2'
+import { HiOutlineEye, HiOutlineArrowsPointingOut, HiOutlinePhoto, HiOutlineArrowDownTray } from 'react-icons/hi2'
 import { FaGithub, FaGitlab } from 'react-icons/fa'
 import { useState } from 'react'
 import { useProjectImages } from '../../hooks/useProjectImages'
@@ -10,12 +10,15 @@ type ProjectCardProps = {
   image: string
   tech: string[]
   demo: string | null
+  apk?: string | null
   repository: string | null
   repoType: "github" | "gitlab" | null
   ctaLabels: {
     viewDemo: string
     viewCode: string
     comingSoon: string
+    viewGallery: string
+    downloadApk: string
   }
 }
 
@@ -25,6 +28,7 @@ const ProjectCard = ({
   image,
   tech,
   demo,
+  apk,
   repository,
   repoType,
   ctaLabels
@@ -41,19 +45,26 @@ const ProjectCard = ({
 
   return (
     <>
-      <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden hover:border-blue-200/50 transition-all duration-300 hover:-translate-y-2 flex flex-col">
+      <div className="flex flex-col overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 hover:border-blue-200/50 hover:shadow-xl hover:shadow-blue-200/5">
 
-        <button
-          type="button"
+        <div
+          role="button"
+          tabIndex={0}
           onClick={() => setIsModalOpen(true)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') setIsModalOpen(true)
+          }}
           aria-label={title}
-          className="group relative h-48 overflow-hidden text-left"
+          className="group relative h-52 cursor-pointer overflow-hidden"
         >
           <img
             src={images[0]}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
+
+          {/* Subtle gradient so the badge/button stay readable on any image */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/0 to-neutral-950/0" />
 
           {images.length > 1 && (
             <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-neutral-950/70 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
@@ -62,12 +73,19 @@ const ProjectCard = ({
             </div>
           )}
 
-          <div className="absolute inset-0 flex items-center justify-center bg-neutral-950/0 opacity-0 transition-all duration-300 group-hover:bg-neutral-950/50 group-hover:opacity-100">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white">
-              <HiOutlineArrowsPointingOut className="h-5 w-5" />
-            </span>
-          </div>
-        </button>
+          {/* Always visible, explicit gallery entry point */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsModalOpen(true)
+            }}
+            className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full border border-white/15 bg-neutral-950/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur transition-colors hover:border-blue-300 hover:bg-blue-600"
+          >
+            <HiOutlineArrowsPointingOut className="h-3.5 w-3.5" />
+            {ctaLabels.viewGallery}
+          </button>
+        </div>
 
         <div className="p-6 flex flex-col grow">
 
@@ -93,15 +111,26 @@ const ProjectCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2
-                           px-4 py-2 bg-blue-600 text-white rounded-lg
-                           hover:bg-blue-700 transition-colors text-sm">
+                           px-4 py-2.5 bg-blue-600 text-white rounded-full
+                           hover:bg-blue-700 transition-colors text-sm font-medium">
                 <HiOutlineEye className="w-4 h-4" />
                 {ctaLabels.viewDemo}
               </a>
+            ) : apk ? (
+              <a
+                href={apk}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2
+                           px-4 py-2.5 bg-blue-600 text-white rounded-full
+                           hover:bg-blue-700 transition-colors text-sm font-medium">
+                <HiOutlineArrowDownTray className="w-4 h-4" />
+                {ctaLabels.downloadApk}
+              </a>
             ) : (
               <div className="flex-1 flex items-center justify-center
-                              px-4 py-2 bg-neutral-700 text-neutral-400
-                              rounded-lg text-sm">
+                              px-4 py-2.5 bg-neutral-700 text-neutral-400
+                              rounded-full text-sm">
                 {ctaLabels.comingSoon}
               </div>
             )}
@@ -112,8 +141,8 @@ const ProjectCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2
-                           px-4 py-2 border-2 border-blue-600 text-blue-200
-                           rounded-lg hover:bg-blue-600/10 transition-colors text-sm">
+                           px-4 py-2.5 border-2 border-blue-600 text-blue-200
+                           rounded-full hover:bg-blue-600/10 transition-colors text-sm font-medium">
                 <RepoIcon className="w-4 h-4" />
                 {ctaLabels.viewCode}
               </a>
@@ -127,13 +156,7 @@ const ProjectCard = ({
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         title={title}
-        description={description}
         images={images}
-        tech={tech}
-        demo={demo}
-        repository={repository}
-        repoType={repoType}
-        ctaLabels={ctaLabels}
       />
     </>
   )

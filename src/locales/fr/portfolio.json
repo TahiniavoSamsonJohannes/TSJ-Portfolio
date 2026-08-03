@@ -1,12 +1,31 @@
 {
   "title": "Portfolio",
   "subtitle": "Découvrez mes projets récents",
+  "loadMore": "Voir plus de projets",
   "cta": {
     "viewDemo": "Voir la démo",
     "viewCode": "Voir le code",
-    "comingSoon": "Bientôt disponible"
+    "comingSoon": "Bientôt disponible",
+    "viewGallery": "Voir plus",
+    "downloadApk": "Télécharger l'APK"
   },
   "projects": [
+    {
+      "id": "sgm",
+      "title": "SGM",
+      "description": "Progessive Web App (PWA) de gestion des membres d'équipage, des voyages, des contrats et des documents pour une compagnie maritime, offrant une interface moderne et responsive pour une expérience utilisateur optimale.",
+      "image": "sgm",
+      "tech": [
+        "React + Vite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Dexie.js",
+        "IndexedDB"
+      ],
+      "demo": "https://sgm-ae.netlify.app/",
+      "repository": "https://github.com/TahiniavoSamsonJohannes/SGM",
+      "repoType": "github"
+    },
     {
       "id": "e-miage",
       "title": "E-MIAGE",
@@ -81,6 +100,50 @@
       "image": "aircoop",
       "tech": ["HTML", "CSS", "PHP", "MySQL"],
       "demo": "https://aircoop-manager.free.nf/index.php",
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "minector",
+      "title": "Minector",
+      "description": "Application mobile Android d'aide à la décision pour le jeu Mines de la plateforme BET261, avec une interface simple pensée pour une lecture rapide des probabilités.",
+      "image": "minector",
+      "tech": ["React Native", "SQLite", "Expo"],
+      "demo": null,
+      "apk": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "plusplus",
+      "title": "Plusplus",
+      "description": "Application mobile de gestion des dépenses au quotidien : liste d'articles avec prix et remises, choix de devise, thème clair/sombre et sauvegarde locale des données via SQLite.",
+      "image": "plusplus",
+      "tech": ["React Native", "SQLite", "Expo"],
+      "demo": null,
+      "apk": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "blackticket",
+      "title": "BlackTicket",
+      "description": "Application mobile Android de billetterie conçue pour un événement pluri-universitaire, permettant l'achat, la gestion et la vérification des tickets directement depuis un smartphone.",
+      "image": "blackticket",
+      "tech": ["XML", "Java", "SQLite"],
+      "demo": null,
+      "apk": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "rakibolana",
+      "title": "Rakibolana Malagasy",
+      "description": "Dictionnaire mobile Android bilingue malgache-français et français-malgache, pensé pour une recherche rapide et un usage hors ligne.",
+      "image": "rakibolana",
+      "tech": ["XML", "Java", "SQLite"],
+      "demo": null,
+      "apk": null,
       "repository": null,
       "repoType": null
     }

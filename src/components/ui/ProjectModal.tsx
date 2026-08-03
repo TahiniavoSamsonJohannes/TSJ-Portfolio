@@ -1,37 +1,15 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { HiOutlineXMark, HiChevronLeft, HiChevronRight, HiOutlineEye } from 'react-icons/hi2'
-import { FaGithub, FaGitlab } from 'react-icons/fa'
+import { HiOutlineXMark, HiChevronLeft, HiChevronRight } from 'react-icons/hi2'
 
 type ProjectModalProps = {
     isOpen: boolean
     onClose: () => void
     title: string
-    description: string
     images: string[]
-    tech: string[]
-    demo: string | null
-    repository: string | null
-    repoType: 'github' | 'gitlab' | null
-    ctaLabels: {
-        viewDemo: string
-        viewCode: string
-        comingSoon: string
-    }
 }
 
-const ProjectModal = ({
-    isOpen,
-    onClose,
-    title,
-    description,
-    images,
-    tech,
-    demo,
-    repository,
-    repoType,
-    ctaLabels,
-}: ProjectModalProps) => {
+const ProjectModal = ({ isOpen, onClose, title, images }: ProjectModalProps) => {
     const [activeIndex, setActiveIndex] = useState(0)
 
     // Reset to the first image every time a new project is opened
@@ -62,12 +40,11 @@ const ProjectModal = ({
 
     if (!isOpen) return null
 
-    const RepoIcon = repoType === 'gitlab' ? FaGitlab : FaGithub
     const hasMultiple = images.length > 1
 
     const modalContent = (
         <div
-            className="fixed inset-0 z-[9999] overflow-y-auto bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 z-[9999] overflow-y-auto bg-black/85 backdrop-blur-md"
             role="dialog"
             aria-modal="true"
             aria-label={title}
@@ -85,19 +62,30 @@ const ProjectModal = ({
 
             {/* Centered when it fits, gracefully scrolls to top when content is taller than the screen */}
             <div
-                className="flex min-h-full justify-center p-4 py-10"
+                className="flex min-h-full justify-center p-4 py-16 sm:py-10"
                 style={{ alignItems: 'safe center' }}
             >
                 <div
-                    className="relative w-full max-w-2xl self-center overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900 shadow-2xl shadow-black/50"
+                    className="flex w-full max-w-4xl flex-col items-center gap-4"
                     onClick={(e) => e.stopPropagation()}
                 >
-                    {/* Image viewer */}
-                    <div className="relative h-56 shrink-0 bg-neutral-950 sm:h-72">
+                    {/* Caption */}
+                    <div className="flex items-center gap-3 text-sm text-neutral-300">
+                        <span className="font-medium text-neutral-100">{title}</span>
+                        {hasMultiple && (
+                            <>
+                                <span className="h-1 w-1 rounded-full bg-neutral-600" aria-hidden="true" />
+                                <span>{activeIndex + 1} / {images.length}</span>
+                            </>
+                        )}
+                    </div>
+
+                    {/* The image itself — shown in full, never cropped, only the edges are rounded */}
+                    <div className="relative w-full">
                         <img
                             src={images[activeIndex]}
                             alt={`${title} - ${activeIndex + 1}`}
-                            className="h-full w-full object-cover"
+                            className="mx-auto max-h-[70vh] w-auto max-w-full rounded-lg object-contain"
                         />
 
                         {hasMultiple && (
@@ -106,7 +94,7 @@ const ProjectModal = ({
                                     type="button"
                                     onClick={() => setActiveIndex((i) => (i - 1 + images.length) % images.length)}
                                     aria-label="Image précédente"
-                                    className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-neutral-950/70 text-white backdrop-blur transition-colors hover:bg-blue-600"
+                                    className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-neutral-950/70 text-white backdrop-blur transition-colors hover:bg-blue-600"
                                 >
                                     <HiChevronLeft className="h-5 w-5" />
                                 </button>
@@ -114,86 +102,32 @@ const ProjectModal = ({
                                     type="button"
                                     onClick={() => setActiveIndex((i) => (i + 1) % images.length)}
                                     aria-label="Image suivante"
-                                    className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-neutral-950/70 text-white backdrop-blur transition-colors hover:bg-blue-600"
+                                    className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-neutral-950/70 text-white backdrop-blur transition-colors hover:bg-blue-600"
                                 >
                                     <HiChevronRight className="h-5 w-5" />
                                 </button>
-
-                                <div className="absolute bottom-3 right-3 rounded-full bg-neutral-950/70 px-3 py-1 text-xs font-medium text-neutral-200 backdrop-blur">
-                                    {activeIndex + 1} / {images.length}
-                                </div>
                             </>
                         )}
                     </div>
 
-                    {/* Numbered thumbnails — only the images that were actually detected */}
+                    {/* Thumbnails */}
                     {hasMultiple && (
-                        <div className="flex gap-2 overflow-x-auto border-b border-neutral-800 bg-neutral-950/50 px-4 py-3">
+                        <div className="flex max-w-full gap-2 overflow-x-auto px-1 py-1">
                             {images.map((src, index) => (
                                 <button
                                     key={src}
                                     type="button"
                                     onClick={() => setActiveIndex(index)}
-                                    className={`relative h-14 w-20 shrink-0 overflow-hidden rounded-lg border-2 transition-all ${activeIndex === index
-                                            ? 'border-blue-200'
-                                            : 'border-transparent opacity-60 hover:opacity-100'
+                                    className={`h-14 w-20 shrink-0 overflow-hidden rounded-lg border-2 transition-all ${activeIndex === index
+                                            ? 'border-blue-300'
+                                            : 'border-transparent opacity-50 hover:opacity-90'
                                         }`}
                                 >
                                     <img src={src} alt="" className="h-full w-full object-cover" />
-                                    <span className="absolute bottom-0.5 right-1 text-[10px] font-semibold text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-                                        {String(index + 1).padStart(2, '0')}
-                                    </span>
                                 </button>
                             ))}
                         </div>
                     )}
-
-                    {/* Content */}
-                    <div className="px-6 py-6">
-                        <h3 className="mb-3 text-2xl font-bold text-blue-200">{title}</h3>
-                        <p className="mb-5 text-sm leading-relaxed text-neutral-300">{description}</p>
-
-                        <div className="mb-6 flex flex-wrap gap-2">
-                            {tech.map((item, i) => (
-                                <span
-                                    key={i}
-                                    className="rounded-full border border-blue-200/20 bg-blue-200/10 px-3 py-1 text-xs text-blue-200"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="flex gap-3">
-                            {demo ? (
-                                <a
-                                    href={demo}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm text-white transition-colors hover:bg-blue-700"
-                                >
-                                    <HiOutlineEye className="h-4 w-4" />
-                                    {ctaLabels.viewDemo}
-                                </a>
-                            ) : (
-                                <div className="flex flex-1 items-center justify-center rounded-lg bg-neutral-800 px-4 py-2.5 text-sm text-neutral-400">
-                                    {ctaLabels.comingSoon}
-                                </div>
-                            )}
-
-                            {repository && (
-                                <a
-                                    href={repository}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-2 rounded-lg border-2 border-blue-600 px-4 py-2.5 text-sm text-blue-200 transition-colors hover:bg-blue-600/10"
-                                >
-                                    <RepoIcon className="h-4 w-4" />
-                                    {ctaLabels.viewCode}
-                                </a>
-                            )}
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

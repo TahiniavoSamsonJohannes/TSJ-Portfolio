@@ -23,13 +23,13 @@ const LanguageSwitcher = ({ className = '' }: LanguageSwitcherProps) => {
   }
 
   return (
-    <div className={`inline-flex items-center rounded-full bg-neutral-900/90 border border-neutral-800 p-1 shadow-lg ${className}`}>
+    <div className={`inline-flex items-center p-1 shadow-lg ${className}`}>
       {languages.map((language) => (
         <button
           key={language.code}
           type="button"
           onClick={() => changeLanguage(language.code)}
-          className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+          className={`px-3 py-2 rounded-full text-sm font-semibold transition-colors outline-none ${
             currentLanguage === language.code
               ? 'bg-blue-500 text-white'
               : 'text-neutral-300 hover:bg-neutral-800'

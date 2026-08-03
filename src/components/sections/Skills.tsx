@@ -1,4 +1,31 @@
 import { useTranslation } from "react-i18next"
+import type { IconType } from "react-icons"
+import { HiOutlineCodeBracket } from "react-icons/hi2"
+import { FaJava } from "react-icons/fa"
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPhp,
+  SiPython,
+  SiHtml5,
+  SiCss,
+  SiReact,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiNestjs,
+  SiExpress,
+  SiMysql,
+  SiPostgresql,
+  SiSqlite,
+  SiPrisma,
+  SiSequelize,
+  SiXml,
+  SiAndroid,
+  SiGit,
+  SiGithub,
+  SiPostman,
+} from "react-icons/si"
 
 type Skill = {
   name: string
@@ -8,6 +35,34 @@ type Skill = {
 type Category = {
   name: string
   skills: Skill[]
+}
+
+// Maps a skill name (as written in the locale files) to one or two brand icons.
+// Kept monochrome (blue accent) everywhere to stay consistent with the rest of the site.
+const techIcons: Record<string, IconType[]> = {
+  "JavaScript": [SiJavascript],
+  "TypeScript": [SiTypescript],
+  "PHP": [SiPhp],
+  "Java": [FaJava],
+  "Python": [SiPython],
+  "HTML": [SiHtml5],
+  "CSS": [SiCss],
+  "ReactJS": [SiReact],
+  "Tailwind CSS": [SiTailwindcss],
+  "Bootstrap": [SiBootstrap],
+  "NodeJS": [SiNodedotjs],
+  "NestJS": [SiNestjs],
+  "Express": [SiExpress],
+  "MySQL": [SiMysql],
+  "PostgreSQL": [SiPostgresql],
+  "SQLite": [SiSqlite],
+  "Prisma": [SiPrisma],
+  "Sequelize": [SiSequelize],
+  "XML": [SiXml],
+  "Android (Java)": [SiAndroid],
+  "React Native": [SiReact],
+  "Git & GitHub": [SiGit, SiGithub],
+  "Postman": [SiPostman],
 }
 
 const Skills = () => {
@@ -67,28 +122,54 @@ const Skills = () => {
           {categories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
 
-              <h2 className="text-2xl font-semibold text-primary mb-6">{category.name}</h2>
+              <h2 className="mb-6 flex items-center gap-3 text-2xl font-semibold text-primary">
+                <span className="h-6 w-1 rounded-full bg-blue-500" />
+                {category.name}
+              </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="group">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-neutral-200">{skill.name}</span>
-                      <span className="text-sm text-neutral-400">{skill.level}</span>
-                    </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                {category.skills.map((skill, skillIndex) => {
+                  const icons = techIcons[skill.name] ?? [HiOutlineCodeBracket]
 
-                    {/* Progress bar */}
-                    <div className="w-full bg-neutral-800 rounded-full h-2 overflow-hidden">
-                      <div
-                        className={`h-2 rounded-full transition-all duration-1000 ease-out ${getLevelColor(skill.level)}`}
-                        style={{ 
-                          width: `${getLevelPercentage(skill.level)}%`,
-                          transitionDelay: `${skillIndex * 100}ms`
-                        }}
-                      />
+                  return (
+                    <div
+                      key={skillIndex}
+                      className="group rounded-xl border border-neutral-700 bg-neutral-800/50 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue-200/50"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-200/10 text-blue-200 transition-colors group-hover:bg-blue-200/20">
+                          {icons.length > 1 ? (
+                            <div className="flex items-center gap-0.5">
+                              {icons.map((Icon, i) => (
+                                <Icon key={i} className="h-4 w-4" />
+                              ))}
+                            </div>
+                          ) : (
+                            (() => {
+                              const Icon = icons[0]
+                              return <Icon className="h-6 w-6" />
+                            })()
+                          )}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate font-semibold text-neutral-200">{skill.name}</p>
+                          <p className="text-xs text-neutral-400">{skill.level}</p>
+                        </div>
+                      </div>
+
+                      {/* Progress bar */}
+                      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-neutral-900">
+                        <div
+                          className={`h-1.5 rounded-full transition-all duration-1000 ease-out ${getLevelColor(skill.level)}`}
+                          style={{
+                            width: `${getLevelPercentage(skill.level)}%`,
+                            transitionDelay: `${skillIndex * 60}ms`
+                          }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
           ))}

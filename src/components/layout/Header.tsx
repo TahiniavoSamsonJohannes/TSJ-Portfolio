@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import { LuMenu, LuX } from "react-icons/lu"
 import LanguageSwitcher from "../ui/LanguageSwitcher"
+import Logo from "../../../public/logo.png"
 
 type NavLink = 'home' | 'about' | 'skills' | 'services' | 'portfolio' | 'contact'
 
@@ -103,15 +104,13 @@ const Header = () => {
       <div className="px-4 pt-4">
         <div
           className={`mx-auto flex max-w-5xl items-center justify-between gap-3 rounded-full border backdrop-blur-xl transition-all duration-300 ${scrolled
-              ? 'border-neutral-800 bg-neutral-950/90 px-3 py-2 shadow-xl shadow-black/30'
-              : 'border-neutral-800/50 bg-neutral-950/70 px-4 py-2.5 shadow-lg shadow-black/10'
+            ? 'border-neutral-800 bg-neutral-950/90 px-3 py-2 shadow-xl shadow-black/30'
+            : 'border-neutral-800/50 bg-neutral-950/70 px-4 py-2.5 shadow-lg shadow-black/10'
             }`}
         >
           {/* Logo */}
           <div className="flex shrink-0 items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 text-sm font-bold text-white">
-              ST
-            </div>
+            <img src={Logo} alt="Logo" className="h-9 w-9" />
             <div className="hidden text-sm font-semibold tracking-tight text-blue-200 sm:block">
               <Trans
                 i18nKey="name"
@@ -135,8 +134,8 @@ const Header = () => {
                 onClick={() => handleNavClick(link)}
                 aria-current={activeSection === link ? 'page' : undefined}
                 className={`relative z-10 rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${activeSection === link
-                    ? 'text-white'
-                    : 'text-neutral-400 hover:text-white'
+                  ? 'text-white'
+                  : 'text-neutral-400 hover:text-white'
                   }`}
               >
                 {t(`nav.${link}`)}
@@ -174,10 +173,7 @@ const Header = () => {
           <div>
             <div className="mb-8 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 text-sm font-bold text-white">
-                  ST
-                </div>
-                <span className="text-lg font-semibold text-blue-200">{t('nav.home')}</span>
+                <img src={Logo} alt="Logo" className="h-9 w-9" />
               </div>
               <button
                 type="button"
@@ -197,8 +193,8 @@ const Header = () => {
                   onClick={() => handleNavClick(link)}
                   aria-current={activeSection === link ? 'page' : undefined}
                   className={`w-full rounded-2xl px-4 py-4 text-left text-base font-medium transition-all duration-200 ${activeSection === link
-                      ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/20'
-                      : 'bg-neutral-900 text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                    ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/20'
+                    : 'bg-neutral-900 text-neutral-300 hover:bg-neutral-800 hover:text-white'
                     }`}
                 >
                   {t(`nav.${link}`)}
@@ -209,7 +205,6 @@ const Header = () => {
 
           <div className="mt-8 flex flex-col gap-4">
             <LanguageSwitcher className="justify-center" />
-            <p className="text-sm leading-relaxed text-neutral-400">{t('footer.quickLinks')}</p>
           </div>
         </aside>
       </div>

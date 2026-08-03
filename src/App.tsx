@@ -10,7 +10,7 @@ import Skills from "./components/sections/Skills"
 const App = () => {
 
   return (
-    <div className="min-h-screen bg-white text-neutral-200">
+    <div className="min-h-screen bg-secondary text-neutral-200">
       <Header />
       <main>
         <Home />

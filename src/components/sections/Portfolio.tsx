@@ -1,4 +1,6 @@
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import { HiChevronDown } from "react-icons/hi2"
 import ProjectCard from '../ui/ProjectCard'
 
 type Project = {
@@ -8,17 +10,16 @@ type Project = {
   image: string
   tech: string[]
   demo: string | null
+  apk?: string | null
   repository: string | null
   repoType: "github" | "gitlab" | null
-  ctaLabels: {
-    viewDemo: string
-    viewCode: string
-    comingSoon: string
-  }
 }
+
+const PROJECTS_PER_PAGE = 6
 
 const Portfolio = () => {
   const { t } = useTranslation('portfolio')
+  const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE)
 
   const projects = t('projects', {
     returnObjects: true,
@@ -28,7 +29,12 @@ const Portfolio = () => {
     viewDemo: t('cta.viewDemo'),
     viewCode: t('cta.viewCode'),
     comingSoon: t('cta.comingSoon'),
+    viewGallery: t('cta.viewGallery'),
+    downloadApk: t('cta.downloadApk'),
   }
+
+  const visibleProjects = projects.slice(0, visibleCount)
+  const hasMore = visibleCount < projects.length
 
   return (
     <section
@@ -44,7 +50,7 @@ const Portfolio = () => {
 
         {/* Project grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {visibleProjects.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -52,12 +58,26 @@ const Portfolio = () => {
               image={project.image}
               tech={project.tech}
               demo={project.demo}
+              apk={project.apk}
               repository={project.repository}
               repoType={project.repoType}
               ctaLabels={ctaLabels}
             />
           ))}
         </div>
+
+        {hasMore && (
+          <div className="mt-12 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((count) => count + PROJECTS_PER_PAGE)}
+              className="flex items-center gap-2 rounded-full border border-blue-500 bg-blue-500/10 px-6 py-3 text-sm font-semibold text-blue-200 transition hover:bg-blue-500 hover:text-white"
+            >
+              {t('loadMore')}
+              <HiChevronDown className="h-4 w-4" />
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
