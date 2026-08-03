@@ -44,7 +44,7 @@ const ProjectModal = ({ isOpen, onClose, title, images }: ProjectModalProps) => 
 
     const modalContent = (
         <div
-            className="fixed inset-0 z-[9999] overflow-y-auto bg-black/85 backdrop-blur-md"
+            className="fixed inset-0 z-9999 overflow-y-auto bg-black/85 backdrop-blur-md"
             role="dialog"
             aria-modal="true"
             aria-label={title}
@@ -55,7 +55,7 @@ const ProjectModal = ({ isOpen, onClose, title, images }: ProjectModalProps) => 
                 type="button"
                 onClick={onClose}
                 aria-label="Fermer"
-                className="fixed right-4 top-4 z-[10000] flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-neutral-950 text-neutral-200 shadow-lg transition-colors hover:bg-neutral-800 hover:text-white"
+                className="fixed right-4 top-4 z-10000 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-neutral-950 text-neutral-200 shadow-lg transition-colors hover:bg-neutral-800 hover:text-white"
             >
                 <HiOutlineXMark className="h-5 w-5" />
             </button>

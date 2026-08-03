@@ -64,7 +64,7 @@ const ProjectCard = ({
           />
 
           {/* Subtle gradient so the badge/button stay readable on any image */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/0 to-neutral-950/0" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-neutral-950/85 via-neutral-950/0 to-neutral-950/0" />
 
           {images.length > 1 && (
             <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-neutral-950/70 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
