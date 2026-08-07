@@ -1,6 +1,6 @@
 import { HiOutlineEye, HiOutlineArrowsPointingOut, HiOutlinePhoto, HiOutlineArrowDownTray } from 'react-icons/hi2'
 import { FaGithub, FaGitlab } from 'react-icons/fa'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useProjectImages } from '../../hooks/useProjectImages'
 import ProjectModal from './ProjectModal'
 
@@ -34,6 +34,8 @@ const ProjectCard = ({
   ctaLabels
 }: ProjectCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [originRect, setOriginRect] = useState<DOMRect | null>(null)
+  const coverImgRef = useRef<HTMLImageElement>(null)
 
   // Automatically detects nameOfProject1.png, nameOfProject2.png, ... on disk
   const images = useProjectImages(`/images/projects/${image}`)
@@ -43,6 +45,15 @@ const ProjectCard = ({
       ? FaGitlab
       : FaGithub
 
+  // Capture the cover image's current position/size right before opening the
+  // modal, so ProjectModal can animate the image flying from here into place.
+  const openModal = () => {
+    if (coverImgRef.current) {
+      setOriginRect(coverImgRef.current.getBoundingClientRect())
+    }
+    setIsModalOpen(true)
+  }
+
   return (
     <>
       <div className="flex flex-col overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-800/50 transition-all duration-300 hover:-translate-y-2 hover:border-blue-200/50 hover:shadow-xl hover:shadow-blue-200/5">
@@ -50,14 +61,15 @@ const ProjectCard = ({
         <div
           role="button"
           tabIndex={0}
-          onClick={() => setIsModalOpen(true)}
+          onClick={openModal}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') setIsModalOpen(true)
+            if (e.key === 'Enter' || e.key === ' ') openModal()
           }}
           aria-label={title}
           className="group relative h-52 cursor-pointer overflow-hidden"
         >
           <img
+            ref={coverImgRef}
             src={images[0]}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -78,7 +90,7 @@ const ProjectCard = ({
             type="button"
             onClick={(e) => {
               e.stopPropagation()
-              setIsModalOpen(true)
+              openModal()
             }}
             className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full border border-white/15 bg-neutral-950/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur transition-colors hover:border-blue-300 hover:bg-blue-600"
           >
@@ -157,6 +169,7 @@ const ProjectCard = ({
         onClose={() => setIsModalOpen(false)}
         title={title}
         images={images}
+        originRect={originRect}
       />
     </>
   )

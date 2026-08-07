@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import Skill from "../ui/Skill";
 
 type SkillType = {
   title: string
@@ -33,8 +32,6 @@ const About = () => {
             </p>
           ))}
         </div>
-
-        <Skill skills={skills} />
 
       </div>
     </section>

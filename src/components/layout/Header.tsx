@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import { LuMenu, LuX } from "react-icons/lu"
 import LanguageSwitcher from "../ui/LanguageSwitcher"
-import Logo from "../../../public/logo.png"
+import Logo from "../../assets/images/logo.png"
 
 type NavLink = 'home' | 'about' | 'skills' | 'services' | 'portfolio' | 'contact'
 

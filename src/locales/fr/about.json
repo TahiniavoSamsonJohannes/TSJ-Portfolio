@@ -2,9 +2,9 @@
   "title": "À propos de moi",
   "subtitle": "Apprenez à me connaitre",
   "description": [
-    "Développeur Full Stack avec plus de 3 ans d'expérience, je conçois et développe des applications web et mobiles modernes, performantes et centrées sur l'utilisateur.",
-    "Diplômé en Génie Logiciel, j'ai consolidé mes compétences à travers de nombreux projets concrets, allant d'applications web complètes à des applications mobiles Android.",
-    "Passionné par l'innovation technologique, je suis en veille permanente sur les nouvelles tendances du développement. Mon objectif : créer des solutions digitales qui apportent une réelle valeur ajoutée."
+    "Développeur Full Stack orienté JavaScript/TypeScript, je conçois et développe des applications web modernes en accordant une attention particulière à l'expérience utilisateur, à la sécurité et à la qualité du code.",
+    "Titulaire d'une Licence en Génie Logiciel, j'ai développé mes compétences à travers différents projets concrets, allant d'applications web complètes à des Progressive Web Apps et quelques applications mobiles réalisées en autodidacte. Ces projets m'ont permis de mettre en pratique des technologies telles que React, Node.js, NestJS, TypeScript, Prisma et différentes solutions de stockage de données.",
+    "Curieux et constamment en apprentissage, j'aime explorer de nouvelles technologies et relever des problématiques techniques. Mon objectif est de concevoir des solutions utiles, fiables et adaptées aux besoins réels des utilisateurs."
   ],
   "skills": [
     { "title": "Front-End", "experience": "3+ ans d'expérience" },

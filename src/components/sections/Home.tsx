@@ -11,8 +11,8 @@ const Home = () => {
 
   const downloadUrl = useMemo(() => {
     return currentLanguage === 'fr'
-      ? '/documents/cv_samsonjohannestahiniavo_fr.pdf'
-      : '/documents/cv_samsonjohannestahiniavo_en.pdf'
+      ? '/documents/CV_SamsonJohannesTahiniavo_FR.pdf'
+      : '/documents/CV_SamsonJohannesTahiniavo_EN.pdf'
   }, [currentLanguage])
 
   const scrollTo = (id: string) => {

@@ -2,9 +2,9 @@
   "title": "About Me",
   "subtitle": "Get to know me",
   "description": [
-    "Full Stack Developer with over 2 years of experience, I design and build modern, performant, and user-centered web and mobile applications.",
-    "With a background in Software Engineering, I have strengthened my skills through numerous hands-on projects, from complete web applications to Android mobile apps such as the Rakibolana Malagasy.",
-    "Passionate about technological innovation, I constantly stay up to date with the latest development trends. My goal: to create digital solutions that deliver real value."
+    "Full Stack Developer focused on JavaScript/TypeScript, I design and develop modern web applications with a strong focus on user experience, security, and code quality.",
+    "With a Bachelor's degree in Software Engineering, I have developed my skills through various hands-on projects, ranging from full-featured web applications to Progressive Web Apps and a few mobile applications developed through self-directed learning. These projects have allowed me to work with technologies such as React, Node.js, NestJS, TypeScript, Prisma, and various data storage solutions.",
+    "Curious and constantly learning, I enjoy exploring new technologies and tackling technical challenges. My goal is to build useful, reliable solutions that address the real needs of their users."
   ],
   "skills": [
     { "title": "Front-End", "experience": "3+ Years Experience" },

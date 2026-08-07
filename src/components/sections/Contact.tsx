@@ -55,7 +55,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/samson-johannes-tahiniavo-721aa6301/',
+      url: 'https://www.linkedin.com/in/samson-johannes-tahiniavo-tsj/',
       color: 'hover:text-[#0A66C2]',
     },
   ]
@@ -180,7 +180,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-neutral-400">Localisation</p>
-                    <p className="text-neutral-200">{t('contact:info.location')}</p>
+                    <a
+                      href="https://maps.app.goo.gl/snXPVDWGAVhDmBDJ6" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-neutral-200 hover:underline"
+                    >
+                      {t('contact:info.location')}
+                    </a>
                   </div>
                 </div>
 

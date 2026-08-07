@@ -41,7 +41,7 @@
       ]
     },
     {
-      "name": "Mobile",
+      "name": "Développement Mobile",
       "skills": [
         { "name": "XML", "level": "Expérimenté" },
         { "name": "Android (Java)", "level": "Intermédiaire" },
@@ -51,7 +51,9 @@
     {
       "name": "Outils & DevOps",
       "skills": [
-        { "name": "Git & GitHub", "level": "Expérimenté" },
+        { "name": "Git", "level": "Expérimenté" },
+        { "name": "GitHub", "level": "Expérimenté" },
+        { "name": "GitLab", "level": "Intermédiaire" },
         { "name": "Postman", "level": "Intermédiaire" }
       ]
     }

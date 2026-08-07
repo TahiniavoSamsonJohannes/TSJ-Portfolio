@@ -24,6 +24,7 @@ import {
   SiAndroid,
   SiGit,
   SiGithub,
+  SiGitlab,
   SiPostman,
 } from "react-icons/si"
 
@@ -61,7 +62,9 @@ const techIcons: Record<string, IconType[]> = {
   "XML": [SiXml],
   "Android (Java)": [SiAndroid],
   "React Native": [SiReact],
-  "Git & GitHub": [SiGit, SiGithub],
+  "Git": [SiGit],
+  "GitHub": [SiGithub],
+  "GitLab": [SiGitlab],
   "Postman": [SiPostman],
 }
 
