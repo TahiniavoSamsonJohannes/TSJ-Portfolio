@@ -11,6 +11,36 @@
   },
   "projects": [
     {
+      "id": "ong-fiadanana",
+      "title": "Fiadanana Madagascar NGO",
+      "description": "WordPress showcase website presenting the NGO's activities and news. Visitors can submit testimonials or contact the organization, while the administrator publishes activities and news using custom content types.",
+      "image": "ongfiada",
+      "tech": ["WordPress", "PHP", "CSS", "Kadence", "Kadence Blocks", "Advanced Custom Fields"],
+      "demo": "https://ong-fiadanana.org",
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "skoolink",
+      "title": "Skoolink",
+      "description": "School management application built as part of a Bachelor's degree in Software Engineering. It centralizes students, teachers, subjects, courses, and timetables in an authenticated admin interface, with user profile photos and local storage for offline use.",
+      "image": "skoolink",
+      "tech": ["React", "Tailwind CSS", "Node.js", "Sequelize", "MySQL", "Git"],
+      "demo": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "tsjweb",
+      "title": "TSJWeb",
+      "description": "Social network where members can create accounts, share text and images, browse registered members, and exchange automatically refreshed private messages. Data is stored in MySQL.",
+      "image": "tsjweb",
+      "tech": ["HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL"],
+      "demo": "https://tsjweb.free.nf",
+      "repository": null,
+      "repoType": null
+    },
+    {
       "id": "sgm",
       "title": "SGM",
       "description": "Progressive Web App (PWA) for managing crew members, voyages, contracts, and documents for a maritime company, featuring a modern and responsive interface for an optimal user experience.",

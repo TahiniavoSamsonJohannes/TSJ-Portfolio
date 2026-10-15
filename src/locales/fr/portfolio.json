@@ -11,6 +11,36 @@
   },
   "projects": [
     {
+      "id": "ong-fiadanana",
+      "title": "ONG Fiadanana Madagascar",
+      "description": "Site vitrine WordPress présentant les activités et actualités de l'ONG. Les visiteurs peuvent envoyer un témoignage ou contacter l'association, tandis que l'administrateur publie les activités et actualités grâce à des types de contenus personnalisés.",
+      "image": "ongfiada",
+      "tech": ["WordPress", "PHP", "CSS", "Kadence", "Kadence Blocks", "Advanced Custom Fields"],
+      "demo": "https://ong-fiadanana.org",
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "skoolink",
+      "title": "Skoolink",
+      "description": "Application de gestion scolaire réalisée dans le cadre de la Licence en Génie Logiciel. Elle centralise les élèves, enseignants, matières, cours et emplois du temps dans une interface d'administration authentifiée, avec photos de profil et stockage local pour fonctionner hors ligne.",
+      "image": "skoolink",
+      "tech": ["React", "Tailwind CSS", "Node.js", "Sequelize", "MySQL", "Git"],
+      "demo": null,
+      "repository": null,
+      "repoType": null
+    },
+    {
+      "id": "tsjweb",
+      "title": "TSJWeb",
+      "description": "Réseau social permettant aux membres de créer un compte, de partager du texte et des images, de consulter les membres inscrits et d'échanger des messages privés actualisés automatiquement. Les données sont stockées dans MySQL.",
+      "image": "tsjweb",
+      "tech": ["HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL"],
+      "demo": "https://tsjweb.free.nf",
+      "repository": null,
+      "repoType": null
+    },
+    {
       "id": "sgm",
       "title": "SGM",
       "description": "Progessive Web App (PWA) de gestion des membres d'équipage, des voyages, des contrats et des documents pour une compagnie maritime, offrant une interface moderne et responsive pour une expérience utilisateur optimale.",
